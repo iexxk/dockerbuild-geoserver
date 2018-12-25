@@ -3,20 +3,20 @@ geoserver镜像构建
 
 ### 功能
 
-* 支持宋体中文
+* 支持微软雅黑中文
 * 支持跨域
 * 支持MySQL
-* 支持高层
+* 支持自带worldwind
 
 ### 使用
 
 ```yaml
   geoserver:
     restart: always
-    image: 	exxk/geoserver:tomcat
+    image: 	exxk/geoserver:worldwind-jar
     ports:
       - "14018:8080"
     volumes:
-      - "/home/dockerdata/v-geoserver/data:/usr/local/tomcat/webapps/geoserver/data"
+      - "/home/dockerdata/v-geoserver/data:/usr/share/geoserver/webapps/geoserver/data"
 ```
 
